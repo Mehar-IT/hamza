@@ -9,7 +9,7 @@ export default function Home() {
                 <p className='text-pink-400 text-2xl'>Hola! i am </p>
                 <h1 className='text-4xl sm:text-7xl'>Hamza Tarique</h1>
                 <h2 className='text-2xl sm:text-4xl text-[#8892b0]'>I'm Full Stack Web Developer from 🇵🇰</h2>
-                <p className='text-[#8892b0] py-4 max-w-[300px]'>I can build website using html,css,bootstrap,tailwind css and react js for frontend.I also know about flutter a little bit have a look mu github to view my project built on flutter,and for backend i use node js (custom backend)</p>
+                <p className='text-[#8892b0] py-4 max-w-[300px]'>I can build website using html,css,bootstrap,tailwind css and react js for frontend.I also know about flutter a little bit have a look on my github to view my projects built on flutter and other technologies,and for backend i use node js (custom backend)</p>
                 <div >
                     <Link to="work" smooth={true} duration={500} offset={70}>
 
