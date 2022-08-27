@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import profile from '../assets/profile.jpeg';
 
 export default function About() {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div name='about' className='bg-gray-900 pt-20 text-white '>
             <div className='max-w-[1000px] px-8 mx-auto flex flex-col items-start sm:items-center h-full'>
@@ -9,10 +12,18 @@ export default function About() {
                     About
                 </div>
                 <div className='grid sm:grid-cols-2 items-center'>
-                    <div className='text-4xl sm:text-5xl p-3 sm:text-right'>
+                    <div
+                        data-aos="fade-left"
+                        data-aos-duration="3000"
+                        data-aos-anchor-placement="top-center"
+                        className='text-4xl sm:text-5xl p-3 sm:text-right'>
                         Hi! I'm Hamza,nice to meet you,please take a look arround
                     </div>
-                    <div className='mx-auto sm:mx-10'>
+                    <div
+                        data-aos="fade-right"
+                        data-aos-duration="3000"
+                        data-aos-anchor-placement="top-center"
+                        className='mx-auto sm:mx-10'>
                         <img className='rounded-full w-56 h-56 object-cover' src={profile} alt="profile pic" />
                     </div>
                 </div>

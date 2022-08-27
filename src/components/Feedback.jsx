@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Location from './Location';
 
 export default function Feedback() {
+    const apikey = import.meta.env.VITE_FORM_KEY;
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div name='feedback' className='bg-gray-900 pt-40'>
             <div className='max-w-[1000px] mx-auto sm:text-center '>
@@ -9,7 +13,11 @@ export default function Feedback() {
                 <p className='text-white mx-3'>Can send me feedback at here</p>
             </div>
             <div className='flex flex-col md:flex-row justify-between  max-w-[1000px] mx-auto p-10 md:p-3 '>
-                <form className="w-full md:w-1/2 sm:mx-3" method='POST' action='https://getform.io/f/e3510801-e91a-4aa4-8803-6e4b984b546a'>
+                <form
+                    data-aos="zoom-in"
+                    data-aos-anchor-placement="top-center"
+                    data-aos-duration="3000"
+                    className="w-full md:w-1/2 sm:mx-3" method='POST' action={`https://getform.io/f/${apikey}`}>
 
                     <div className=" mb-6 md:mb-0">
                         <label

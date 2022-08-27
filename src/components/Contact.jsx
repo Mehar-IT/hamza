@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaGithub, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { GoLocation, GoMail } from 'react-icons/go'
 import { AiOutlinePhone } from 'react-icons/ai'
 import logo from '../assets/hamza.png';
 
 export default function Contact() {
-
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
-        <div id='contact' className='contact bg-gray-900'>
-            <div className='bg-gray-900 max-w-[1000px] mx-auto flex flex-col justify-between items-center text-gray-400 pt-3'>
+        <div id='contact'
+            data-aos-anchor-placement="top-center"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+            className='contact'>
+            <div className='max-w-[1000px] mx-auto flex flex-col justify-between items-center text-gray-400 pt-3'>
 
                 <span><img src={logo} alt="" /></span>
                 <div className='flex flex-col sm:flex-row flex-wrap justify-between w-full   '>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import coivd from '../assets/Screenshots/covid.png';
 import news from '../assets/Screenshots/news.png';
 import pokemon from '../assets/Screenshots/pokemon.png';
@@ -7,6 +7,11 @@ import textutil from '../assets/Screenshots/textutil.png';
 import whatsapp from '../assets/Screenshots/whatsapp.png';
 
 export default function Work() {
+    useEffect(() => {
+        AOS.init({
+            once: true
+        });
+    }, [])
     return (
         <div name='work' className='bg-gray-900 w-full '>
             <div className='max-w-[1000px] mx-auto bg-gray-900 text-white pt-40'>
@@ -16,7 +21,9 @@ export default function Work() {
                 </div>
                 <div className='mx-10 sm:mx-3 grid  sm:grid-cols-2 md:grid-cols-3 gap-3'>
                     <div style={{ backgroundImage: `URL(${pokemon})` }}
-                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto'>
+                        data-aos="flip-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100'>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>Pokemon App</span>
@@ -30,7 +37,9 @@ export default function Work() {
                     </div>
 
                     <div style={{ backgroundImage: `URL(${news})` }}
-                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto'>
+                        data-aos="flip-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100'>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>News App</span>
@@ -43,7 +52,9 @@ export default function Work() {
                         </div>
                     </div>
                     <div style={{ backgroundImage: `URL(${whatsapp})` }}
-                        className='shadow-lg shadow-gray-900  rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto '>
+                        data-aos="flip-up" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900  rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100 '>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>Whatsapp util</span>
@@ -55,7 +66,10 @@ export default function Work() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `URL(${coivd})` }} className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto'>
+                    <div style={{ backgroundImage: `URL(${coivd})` }}
+                        data-aos="flip-down" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100'>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>Covid Tracker</span>
@@ -67,7 +81,10 @@ export default function Work() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ backgroundImage: `URL(${textutil})` }} className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto'>
+                    <div style={{ backgroundImage: `URL(${textutil})` }}
+                        data-aos="flip-down" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100'>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>Textutil App</span>
@@ -80,7 +97,10 @@ export default function Work() {
                         </div>
                     </div>
 
-                    <div style={{ backgroundImage: `URL(${postmaster})` }} className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto '>
+                    <div style={{ backgroundImage: `URL(${postmaster})` }}
+                        data-aos="flip-down" data-aos-anchor-placement="bottom-bottom"
+                        data-aos-duration="2000"
+                        className='shadow-lg shadow-gray-900 rounded-md h-52 w-full bg-no-repeat bg-cover bg-center  mx-auto opacity-70 hover:opacity-100 '>
                         <div className='flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div'>
                             <div className='opacity-0 group-hover:opacity-100'>
                                 <span className='text-center'>Post Master</span>
