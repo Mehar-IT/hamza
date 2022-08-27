@@ -1,0 +1,80 @@
+.loader {
+  width: 6.25em;
+  height: 6.25em;
+  margin: 50px auto 0;
+  position: relative;
+  animation: rotate 2.4s linear infinite;
+}
+.loader .dot {
+  width: 2.4em;
+  height: 2.4em;
+  margin: auto;
+  border-radius: 100%;
+  position: absolute;
+}
+.loader .dot:nth-child(1) {
+  background: #ff4444;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  animation: dotsY 2.4s linear infinite;
+}
+.loader .dot:nth-child(2) {
+  background: #ffbb33;
+  left: 0;
+  right: 0;
+  top: 0;
+  animation: dotsX 2.4s linear infinite;
+}
+.loader .dot:nth-child(3) {
+  background: #99cc00;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  animation: dotsY 2.4s linear infinite;
+}
+.loader .dot:nth-child(4) {
+  background: #33b5e5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: dotsX 2.4s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    width: 6.25em;
+    height: 6.25em;
+  }
+  66% {
+    width: 2.4em;
+    height: 2.4em;
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 6.25em;
+    height: 6.25em;
+  }
+}
+@keyframes dotsY {
+  66% {
+    opacity: 0.1;
+    width: 2.4em;
+  }
+  77% {
+    opacity: 1;
+    width: 0;
+  }
+}
+@keyframes dotsX {
+  66% {
+    opacity: 0.1;
+    height: 2.4em;
+  }
+  77% {
+    opacity: 1;
+    height: 0;
+  }
+}
