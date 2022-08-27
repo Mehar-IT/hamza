@@ -11,18 +11,18 @@ export default function Contact() {
             <div className='bg-gray-800 max-w-[1000px] mx-auto flex flex-col justify-between items-center text-gray-400 pt-3'>
 
                 <span><img src={logo} alt="" /></span>
-                <div className='flex flex-col sm:flex-row flex-wrap w-full justify-evenly  space-x-5 space-y-3 '>
-                    <div className="card flex flex-col items-center justify-center hover:scale-110">
+                <div className='flex flex-col sm:flex-row flex-wrap justify-between w-full   '>
+                    <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
                         <span><GoLocation size={30} /></span>
                         <h1>Address</h1>
                         <p>Hyderabad,Sindh Pakistan</p>
                     </div>
-                    <div className="card flex flex-col items-center justify-center hover:scale-110 ">
+                    <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
                         <span><GoMail size={30} /></span>
                         <h1>Email</h1>
                         <p>hamzatariquearain@gmail.com</p>
                     </div>
-                    <div className="card flex flex-col items-center justify-center hover:scale-110 ">
+                    <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
                         <span><AiOutlinePhone size={30} /></span>
                         <h1>Contact</h1>
                         <p>(+92) 3225322156</p>

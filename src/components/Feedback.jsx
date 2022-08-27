@@ -8,8 +8,8 @@ export default function Feedback() {
                 <h1 className='text-3xl font-bold mb-3 text-white border-b-4 border-pink-600 inline-block mx-3'>Feedback</h1>
                 <p className='text-white mx-3'>Can send me feedback at here</p>
             </div>
-            <div className='flex flex-col md:flex-row justify-between  max-w-[1000px] mx-auto p-10 md:p-3 space-x-3 space-y-3'>
-                <form className="w-full md:w-1/2" method='POST' action='https://getform.io/f/e3510801-e91a-4aa4-8803-6e4b984b546a'>
+            <div className='flex flex-col md:flex-row justify-between  max-w-[1000px] mx-auto p-10 md:p-3 '>
+                <form className="w-full md:w-1/2 sm:mx-3" method='POST' action='https://getform.io/f/e3510801-e91a-4aa4-8803-6e4b984b546a'>
 
                     <div className=" mb-6 md:mb-0">
                         <label
