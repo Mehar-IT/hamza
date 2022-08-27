@@ -7,8 +7,8 @@ import logo from '../assets/hamza.png';
 export default function Contact() {
 
     return (
-        <div id='contact' className='contact bg-gray-800'>
-            <div className='bg-gray-800 max-w-[1000px] mx-auto flex flex-col justify-between items-center text-gray-400 pt-3'>
+        <div id='contact' className='contact bg-gray-900'>
+            <div className='bg-gray-900 max-w-[1000px] mx-auto flex flex-col justify-between items-center text-gray-400 pt-3'>
 
                 <span><img src={logo} alt="" /></span>
                 <div className='flex flex-col sm:flex-row flex-wrap justify-between w-full   '>

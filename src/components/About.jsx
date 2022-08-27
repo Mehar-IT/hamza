@@ -3,7 +3,7 @@ import profile from '../assets/profile.jpeg';
 
 export default function About() {
     return (
-        <div name='about' className='bg-gray-800 pt-20 text-white '>
+        <div name='about' className='bg-gray-900 pt-20 text-white '>
             <div className='max-w-[1000px] px-8 mx-auto flex flex-col items-start sm:items-center h-full'>
                 <div className='text-4xl ml-3 border-b-4 border-pink-600 font-bold'>
                     About

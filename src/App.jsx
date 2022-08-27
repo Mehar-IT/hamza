@@ -18,7 +18,7 @@ function App() {
   }, [])
   return (
     <>
-      {splashScreen ? <div className='flex justify-center items-center h-screen w-screen bg-gray-800'><Splash /></div> :
+      {splashScreen ? <div className='flex justify-center items-center h-screen w-screen bg-gray-900'><Splash /></div> :
 
         <div >
           <Navbar />
