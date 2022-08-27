@@ -11,6 +11,7 @@ export default function Navbar() {
         setNav(!nav);
     }
     useEffect(() => {
+        var prevScrollpos = window.pageYOffset;
         window.onscroll = () => {
             if (document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
@@ -18,12 +19,20 @@ export default function Navbar() {
             else {
                 mybutton.style.display = "none";
             }
+
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
         }
 
     }, [])
 
     return (
-        <div className='bg-gray-800 w-full text-gray-300 flex justify-between items-center h-16 fixed z-10'>
+        <div id='navbar' className='bg-gray-800 w-full text-gray-300 flex justify-between items-center fixed h-16 z-10'>
             <div className="logo">
                 <img src={logo} alt="" className='w-44 mx-5' />
             </div>
