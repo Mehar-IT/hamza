@@ -13,8 +13,8 @@ export default function Skill() {
         AOS.init();
     }, [])
     return (
-        <div name='skills' className='bg-gray-900'>
-            <div className='max-w-[1000px] mx-auto bg-gray-900 text-white pt-40' >
+        <div name='skills' className='bg-gray-900 min-h-screen'>
+            <div className='max-w-[1000px] mx-auto  bg-gray-900 text-white' >
                 <div className='sm:text-center ml-10 mb-10 '>
                     <p className='text-3xl border-b-4 border-pink-600 inline-block mb-3 font-bold'>Skill</p>
                     <p>These are the technologies I've worked with</p>

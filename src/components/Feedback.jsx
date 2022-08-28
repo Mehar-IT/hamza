@@ -7,7 +7,7 @@ export default function Feedback() {
         AOS.init();
     }, [])
     return (
-        <div name='feedback' className='bg-gray-900 pt-40'>
+        <div name='feedback' className='bg-gray-900 pt-40 min-h-screen'>
             <div className='max-w-[1000px] mx-auto sm:text-center '>
                 <h1 className='text-3xl font-bold mb-3 text-white border-b-4 border-pink-600 inline-block mx-3'>Feedback</h1>
                 <p className='text-white mx-3'>Can send me feedback at here</p>

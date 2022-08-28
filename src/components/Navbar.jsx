@@ -45,12 +45,12 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link to="about" smooth={true} duration={500} offset={-100}>
+                    <Link to="about" smooth={true} duration={500} offset={-20}>
                         About
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link to="skills" smooth={true} duration={700}>
+                    <Link to="skills" smooth={true} duration={700} offset={-100}>
                         Skills
                     </Link>
                 </li>
@@ -89,12 +89,12 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link onClick={handleClick} to="about" smooth={true} duration={500} offset={-100}>
+                    <Link onClick={handleClick} to="about" smooth={true} duration={500} >
                         About
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link onClick={handleClick} to="skills" smooth={true} duration={700}>
+                    <Link onClick={handleClick} to="skills" smooth={true} duration={700} offset={-100}>
                         Skills
                     </Link>
                 </li>
