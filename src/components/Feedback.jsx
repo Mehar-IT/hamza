@@ -15,7 +15,7 @@ export default function Feedback() {
             <div className='flex flex-col md:flex-row justify-between  max-w-[1000px] mx-auto p-10 md:p-3 '>
                 <form
                     data-aos="zoom-in"
-                    data-aos-anchor-placement="top-center"
+                    // data-aos-anchor-placement="top-center"
                     data-aos-duration="3000"
                     className="w-full md:w-1/2 sm:mx-3" method='POST' action={`https://getform.io/f/${apikey}`}>
 

@@ -12,7 +12,7 @@ export default function Home() {
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
             data-aos-duration="3000"
-            name='home' className='w-full h-screen bg-gray-900'>
+            name='home' className='w-full pt-32 bg-gray-900'>
             <div className="max-w-[1000px] px-8 mx-auto flex flex-col justify-center items-start h-full text-[#FFFDD0]">
                 <p className='text-pink-400 text-2xl'>Hola! i am <img className='w-14 inline' src={hand} alt="hand pic" /> </p>
                 <h1 className='text-4xl sm:text-7xl'>Hamza Tarique</h1>

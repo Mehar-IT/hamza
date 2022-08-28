@@ -141,7 +141,7 @@ export default function Navbar() {
 
             </div>
 
-            <div id='mybutton' className=' hidden fixed bottom-3 right-5 bg-gray-400   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110'
+            <div id='mybutton' className=' hidden z-10 fixed bottom-3 right-5 bg-gray-400   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110'
                 onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }} >

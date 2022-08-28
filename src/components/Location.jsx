@@ -6,7 +6,7 @@ export default function Location() {
     })
     return (
         <div
-            data-aos-anchor-placement="top-center"
+            // data-aos-anchor-placement="top-center"
             data-aos="zoom-out"
             data-aos-duration="3000"
             className="location md:w-1/2 w-full sm:mx-3">
