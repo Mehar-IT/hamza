@@ -45,12 +45,12 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link to="about" smooth={true} duration={500} offset={-100}>
+                    <Link to="about" smooth={true} duration={500} offset={-20}>
                         About
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link to="skills" smooth={true} duration={700}>
+                    <Link to="skills" smooth={true} duration={700} offset={-100}>
                         Skills
                     </Link>
                 </li>
@@ -89,12 +89,12 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link onClick={handleClick} to="about" smooth={true} duration={500} offset={-100}>
+                    <Link onClick={handleClick} to="about" smooth={true} duration={500} >
                         About
                     </Link>
                 </li>
                 <li className='hover:text-gray-300 hover:scale-110'>
-                    <Link onClick={handleClick} to="skills" smooth={true} duration={700}>
+                    <Link onClick={handleClick} to="skills" smooth={true} duration={700} offset={-100}>
                         Skills
                     </Link>
                 </li>
@@ -141,7 +141,7 @@ export default function Navbar() {
 
             </div>
 
-            <div id='mybutton' className=' hidden fixed bottom-3 right-5 bg-gray-400   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110'
+            <div id='mybutton' className=' hidden z-10 fixed bottom-3 right-5 bg-gray-400   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110'
                 onClick={() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }} >

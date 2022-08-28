@@ -8,12 +8,10 @@ import whatsapp from '../assets/Screenshots/whatsapp.png';
 
 export default function Work() {
     useEffect(() => {
-        AOS.init({
-            once: true
-        });
+        AOS.init();
     }, [])
     return (
-        <div name='work' className='bg-gray-900 w-full '>
+        <div name='work' className='bg-gray-900 w-full min-h-screen '>
             <div className='max-w-[1000px] mx-auto bg-gray-900 text-white pt-40'>
                 <div className='sm:text-center ml-10'>
                     <h1 className='text-3xl font-bold border-b-4 border-pink-600 inline-block'>Work</h1>

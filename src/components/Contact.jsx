@@ -10,7 +10,7 @@ export default function Contact() {
     }, [])
     return (
         <div id='contact'
-            data-aos-anchor-placement="top-center"
+            // data-aos-anchor-placement="top-center"
             data-aos="zoom-in"
             data-aos-duration="3000"
             className='contact'>

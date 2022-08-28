@@ -20,7 +20,7 @@ function App() {
     <>
       {splashScreen ? <div className='flex justify-center items-center h-screen w-screen bg-gray-900'><Splash /></div> :
 
-        <div >
+        <div className='overflow-hidden'>
           <Navbar />
           <Home />
           <About />
