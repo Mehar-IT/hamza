@@ -10,7 +10,8 @@ lerna-debug.log*
 apikey.js
 
 node_modules
-dist
+# dist
+
 dist-ssr
 .env
 *.local
