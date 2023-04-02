@@ -5,6 +5,7 @@ import hand from "../assets/splash/hand.gif";
 import pk from "../assets/pk.gif";
 import { useThemeContext } from "../context/ThemeContextProvider";
 import resume from "../assets/HAMZA_TARIQUE_CV.pdf";
+import "./home.css";
 
 export default function Home() {
   const { isLightTheme, light, dark } = useThemeContext();
@@ -26,17 +27,54 @@ export default function Home() {
           !isLightTheme ? "text-[#FFFDD0]" : "text-gray-800"
         }`}
       >
-        <p className="text-pink-400 text-2xl font-semibold">
-          Hola! i am <img className="w-14 inline" src={hand} alt="hand pic" />{" "}
-        </p>
-        <h1 className="text-3xl sm:text-7xl">Hamza Tarique</h1>
+        <p className="text-pink-400 text-2xl font-semibold">Hola , I am</p>
+
+        <h1 className="text-3xl sm:text-7xl">
+          Hamza Tarique{" "}
+          <img className="w-14 inline" src={hand} alt="hand pic" />
+        </h1>
         <h2
           className={`${
             !isLightTheme ? "text-gray-300" : "text-gray-500"
           } text-2xl sm:text-4xl `}
         >
-          I'm Full Stack Web Developer from
-          <img src={pk} alt="pk" className="inline w-12 h-12 ml-2" />
+          <div className="wrapper flex flex-col md:flex-row md:items-center">
+            <span>I'm &nbsp;</span>
+            <ul className="dynamic-txts">
+              <li>
+                <span
+                  className={`after:${
+                    !isLightTheme ? "bg-gray-900" : "bg-white"
+                  }`}
+                >
+                  Full Stack
+                </span>
+              </li>
+              <li>
+                <span
+                  className={`after:${
+                    !isLightTheme ? "bg-gray-900" : "bg-white"
+                  }`}
+                >
+                  Mern Stack &nbsp;
+                </span>
+              </li>
+              <li>
+                <span
+                  className={`after:${
+                    !isLightTheme ? "bg-gray-900" : "bg-white"
+                  }`}
+                >
+                  Next JS
+                </span>
+              </li>
+            </ul>
+
+            <span className="flex">
+              <span>Developer from</span>
+              <img src={pk} alt="pk" className="inline w-12 h-12 ml-2" />
+            </span>
+          </div>
         </h2>
         <p
           className={`${
