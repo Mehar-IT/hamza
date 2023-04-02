@@ -34,7 +34,7 @@ export default function Home() {
             !isLightTheme ? "text-gray-300" : "text-gray-500"
           } text-2xl sm:text-4xl `}
         >
-          I'm Full Stack Web Developer from 🇵🇰
+          I'm Full Stack Web Developer from
           <img src={pk} alt="pk" className="inline w-12 h-12 ml-2" />
         </h2>
         <p
