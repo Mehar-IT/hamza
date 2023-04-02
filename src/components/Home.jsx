@@ -4,6 +4,7 @@ import { Link } from "react-scroll";
 import hand from "../assets/splash/hand.gif";
 import pk from "../assets/pk.gif";
 import { useThemeContext } from "../context/ThemeContextProvider";
+import resume from "../assets/HAMZA_TARIQUE_CV.pdf";
 
 export default function Home() {
   const { isLightTheme, light, dark } = useThemeContext();
@@ -42,10 +43,11 @@ export default function Home() {
             !isLightTheme ? "text-gray-300" : "text-gray-500"
           } py-4 max-w-[300px] font-medium`}
         >
-          I can build website using html,css,bootstrap,tailwind css and react js
-          for frontend.I also know about flutter a little bit have a look on my
-          github to view my projects built on flutter and other technologies,and
-          for backend i use node js (custom backend)
+          I can build website using html,css,bootstrap,tailwind css MUI,Chakra
+          Ui and react js for frontend.I also know about flutter a little bit
+          have a look on my github to view my projects built on flutter and
+          other technologies,and for backend i use node js (custom backend)....I
+          can build fullstack application on nextjs
         </p>
         <div className="flex sm:flex-row justify-start items-center flex-col space-x-2 space-y-2 sm:space-y-0 ">
           <Link to="work" smooth={true} duration={500} offset={70}>
@@ -67,7 +69,8 @@ export default function Home() {
           >
             <a
               className="button"
-              href="https://drive.google.com/file/d/1sMEQM0pJ1XVDDw4a3ZrrcEY6T1V_yvKF/view?usp=share_link"
+              // href="https://drive.google.com/file/d/1sMEQM0pJ1XVDDw4a3ZrrcEY6T1V_yvKF/view?usp=share_link"
+              href={resume}
               download
             >
               Download Resume

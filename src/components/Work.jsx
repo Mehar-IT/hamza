@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import coivd from "../assets/Screenshots/covid.png";
-import news from "../assets/Screenshots/news.png";
+import ecommerce from "../assets/Screenshots/ecommerce.png";
+import chat from "../assets/Screenshots/chat.png";
 import pokemon from "../assets/Screenshots/pokemon.png";
 import postmaster from "../assets/Screenshots/postmaster.png";
 import textutil from "../assets/Screenshots/textutil.png";
@@ -59,7 +59,7 @@ export default function Work() {
           </div>
 
           <div
-            style={{ backgroundImage: `URL(${news})` }}
+            style={{ backgroundImage: `URL(${chat})` }}
             data-aos="flip-up"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="2000"
@@ -67,15 +67,18 @@ export default function Work() {
           >
             <div className="flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div">
               <div className="opacity-0 group-hover:opacity-100">
-                <span className="text-center">News App</span>
+                <span className="text-center">Chat Application</span>
                 <div>
-                  <a href="http://mynewsapi.surge.sh/" target="_blank">
+                  <a
+                    href="https://hamza-chat-mern.herokuapp.com/"
+                    target="_blank"
+                  >
                     <button className="bg-white text-gray-700 hover:border-black m-2">
                       live
                     </button>
                   </a>
                   <a
-                    href="https://github.com/Mehar-IT/News_ReactApp"
+                    href="https://github.com/Mehar-IT/chat_application"
                     target="_blank"
                   >
                     <button className="bg-white text-gray-700 hover:border-black ">
@@ -115,7 +118,7 @@ export default function Work() {
             </div>
           </div>
           <div
-            style={{ backgroundImage: `URL(${coivd})` }}
+            style={{ backgroundImage: `URL(${ecommerce})` }}
             data-aos="flip-down"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="2000"
@@ -123,15 +126,15 @@ export default function Work() {
           >
             <div className="flex shadow-lg shadow-gray-900  sm:flex-col h-full justify-evenly items-center text-center rounded-md group content-div">
               <div className="opacity-0 group-hover:opacity-100">
-                <span className="text-center">Covid Tracker</span>
+                <span className="text-center">Ecommerce</span>
                 <div>
-                  <a href="http://covidappbyhamza.surge.sh/" target="_blank">
+                  <a href="https://ecommerceforfyp.vercel.app/" target="_blank">
                     <button className="bg-white text-gray-700 hover:border-black m-2">
                       live
                     </button>
                   </a>
                   <a
-                    href="https://github.com/Mehar-IT/Covid_Tracker"
+                    href="https://github.com/Mehar-IT/ecommerce"
                     target="_blank"
                   >
                     <button className="bg-white text-gray-700 hover:border-black ">
