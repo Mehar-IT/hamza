@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import hand from "../assets/splash/hand.gif";
@@ -14,6 +14,7 @@ export default function Home() {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <div
       data-aos="fade-up"
@@ -38,41 +39,18 @@ export default function Home() {
             !isLightTheme ? "text-gray-300" : "text-gray-500"
           } text-2xl sm:text-4xl `}
         >
-          <div className="wrapper flex flex-col md:flex-row md:items-center">
-            <span>I'm &nbsp;</span>
-            <ul className="dynamic-txts">
-              <li>
-                <span
-                  className={`after:${
-                    !isLightTheme ? "bg-gray-900" : "bg-white"
-                  }`}
-                >
-                  Full Stack
-                </span>
-              </li>
-              <li>
-                <span
-                  className={`after:${
-                    !isLightTheme ? "bg-gray-900" : "bg-white"
-                  }`}
-                >
-                  Mern Stack &nbsp;
-                </span>
-              </li>
-              <li>
-                <span
-                  className={`after:${
-                    !isLightTheme ? "bg-gray-900" : "bg-white"
-                  }`}
-                >
-                  Next JS
-                </span>
-              </li>
-            </ul>
-
-            <span className="flex">
-              <span>Developer from</span>
-              <img src={pk} alt="pk" className="inline w-12 h-12 ml-2" />
+          <div className="wrapper flex flex-col justify-center md:items-start md:justify-start md:flex-row ">
+            <span>I'm</span>
+            <span className="text-red-500 font-semibold italic">
+              <WordFlick />
+            </span>
+            <span>
+              developer from
+              <img
+                src={pk}
+                alt="pk"
+                className="inline w-8 sm:w-12 h-8 sm:h-12 ml-2 "
+              />
             </span>
           </div>
         </h2>
@@ -119,3 +97,43 @@ export default function Home() {
     </div>
   );
 }
+
+const WordFlick = () => {
+  const words = ["Mern Stack", "Full Stack", "Next JS"];
+  const [part, setPart] = useState("");
+  const [i, setI] = useState(0);
+  const [offset, setOffset] = useState(0);
+  const [forwards, setForwards] = useState(true);
+  const [skipCount, setSkipCount] = useState(0);
+  const [speed, setSpeed] = useState(70);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (forwards) {
+        if (offset >= words[i].length) {
+          setSkipCount((prevCount) => prevCount + 1);
+          if (skipCount === 14) {
+            setForwards(false);
+            setSkipCount(0);
+          }
+        }
+      } else {
+        if (offset === 0) {
+          setForwards(true);
+          setI((prevI) => (prevI + 1) % words.length);
+        }
+      }
+      setPart(words[i].substring(0, offset));
+      if (skipCount === 0) {
+        if (forwards) {
+          setOffset((prevOffset) => prevOffset + 1);
+        } else {
+          setOffset((prevOffset) => prevOffset - 1);
+        }
+      }
+    }, speed);
+    return () => clearInterval(interval);
+  }, [i, offset, forwards, skipCount, speed]);
+
+  return <div className="word">&nbsp;{part}&nbsp;</div>;
+};
