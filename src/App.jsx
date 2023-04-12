@@ -29,12 +29,15 @@ function App() {
       ) : (
         <div className={`${theme.bg} overflow-hidden`}>
           <Navbar />
-          <Home />
-          <About />
-          <Skill />
-          <Work />
-          <Feedback />
-          <Contact />
+          <span className="bar">
+
+            <Home />
+            <About />
+            <Skill />
+            <Work />
+            <Feedback />
+            <Contact />
+          </span>
         </div>
       )}
     </>

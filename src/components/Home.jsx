@@ -24,9 +24,8 @@ export default function Home() {
       className={`w-full pt-32 mb-32 md:mb-0 md:min-h-screen ${theme.bg}`}
     >
       <div
-        className={`max-w-[1000px] px-8 mx-auto flex flex-col justify-center ${
-          !isLightTheme ? "text-[#FFFDD0]" : "text-gray-800"
-        }`}
+        className={`max-w-[1000px] px-8 mx-auto flex flex-col justify-center ${!isLightTheme ? "text-[#FFFDD0]" : "text-gray-800"
+          }`}
       >
         <p className="text-pink-400 text-2xl font-semibold">Hola , I am</p>
 
@@ -35,12 +34,11 @@ export default function Home() {
           <img className="w-14 inline" src={hand} alt="hand pic" />
         </h1>
         <h2
-          className={`${
-            !isLightTheme ? "text-gray-300" : "text-gray-500"
-          } text-2xl sm:text-4xl `}
+          className={`${!isLightTheme ? "text-gray-300" : "text-gray-500"
+            } text-2xl sm:text-4xl `}
         >
           <div className="wrapper flex flex-col justify-center md:items-start md:justify-start md:flex-row ">
-            <span>I'm</span>
+            <span>I'm&nbsp;</span>
             <span className="text-red-500 font-semibold italic">
               <WordFlick />
             </span>
@@ -55,9 +53,8 @@ export default function Home() {
           </div>
         </h2>
         <p
-          className={`${
-            !isLightTheme ? "text-gray-300" : "text-gray-500"
-          } py-4 max-w-[300px] font-medium`}
+          className={`${!isLightTheme ? "text-gray-300" : "text-gray-500"
+            } py-4 max-w-[300px] font-medium`}
         >
           I can build website using html,css,bootstrap,tailwind css MUI,Chakra
           Ui and react js for frontend.I also know about flutter a little bit
@@ -68,9 +65,8 @@ export default function Home() {
         <div className="flex sm:flex-row justify-start items-center flex-col space-x-2 space-y-2 sm:space-y-0 ">
           <Link to="work" smooth={true} duration={500} offset={70}>
             <button
-              className={`flex group justify-start  items-center px-6 py-3 border-2 ${
-                !isLightTheme ? "border-white" : "border-gray-500"
-              }`}
+              className={`flex group justify-start  items-center px-6 py-3 border-2 ${!isLightTheme ? "border-white" : "border-gray-500"
+                }`}
             >
               View work
               <span className="group-hover:rotate-90 duration-300 mx-3">
@@ -79,9 +75,8 @@ export default function Home() {
             </button>
           </Link>
           <button
-            className={`button border-2  ${
-              !isLightTheme ? "border-white" : "border-gray-500"
-            }`}
+            className={`button border-2  ${!isLightTheme ? "border-white" : "border-gray-500"
+              }`}
           >
             <a
               className="button"
@@ -135,5 +130,5 @@ const WordFlick = () => {
     return () => clearInterval(interval);
   }, [i, offset, forwards, skipCount, speed]);
 
-  return <div className="word">&nbsp;{part}&nbsp;</div>;
+  return <div className="word">{part}&nbsp;</div>;
 };
