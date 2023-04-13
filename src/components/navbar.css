@@ -5,15 +5,10 @@
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
-  /* width: 250px; */
   right: 0;
-  background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-  /* box-shadow: -13px -1px 10px -9px rgba(0, 0, 0, 0.55);
-  -webkit-box-shadow: -13px -1px 10px -9px rgba(0, 0, 0, 0.55);
-  -moz-box-shadow: -13px -1px 10px -9px rgba(0, 0, 0, 0.55); */
+  transition: 1s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
 .sidepanel a {
@@ -26,8 +21,8 @@
 
 .sidepanel .closebtn {
   position: absolute;
-  top: 0;
-  right: 25px;
+  top: 5px;
+  right: 40px;
   font-size: 36px;
   margin-left: 50px;
 }
@@ -41,4 +36,9 @@
   cursor: pointer;
   padding: 10px 15px;
   border: none;
+}
+
+.bar > *:not(nav) {
+  filter: blur(5px);
+  pointer-events: none;
 }

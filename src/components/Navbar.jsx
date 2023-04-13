@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   FaGithub,
   FaFacebook,
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import {
+  BiMenu
+} from "react-icons/bi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import logo from "../assets/hamza.png";
 import { Link } from "react-scroll";
@@ -12,12 +15,9 @@ import { useThemeContext } from "../context/ThemeContextProvider";
 import DarkModeToggle from "react-dark-mode-toggle";
 import './navbar.css'
 
-export default function Navbar() {
+export default function Navbar({ handleNav, nav }) {
   const { toggleTheme, isLightTheme, light, dark } = useThemeContext();
   const theme = isLightTheme ? light : dark;
-
-  const [nav, setNav] = useState(false);
-
 
   useEffect(() => {
     var prevScrollpos = window.pageYOffset;
@@ -38,19 +38,6 @@ export default function Navbar() {
     };
   }, []);
 
-  function handleNav() {
-    if (!nav) {
-      document.getElementById("mySidepanel").style.width = "250px";
-      document.getElementsByClassName('bar')[0].style.opacity = "0.1";
-      document.getElementsByTagName('body')[0].style.overflow = "hidden";
-    }
-    else {
-      document.getElementById("mySidepanel").style.width = "0";
-      document.getElementsByClassName('bar')[0].style.opacity = "1";
-      document.getElementsByTagName('body')[0].style.overflowY = "scroll";
-    }
-    setNav(!nav)
-  }
 
 
   return (
@@ -103,7 +90,7 @@ export default function Navbar() {
       </ul>
 
       {/* hamburger */}
-      <button className="lg:hidden openbtn mr-3 hover:scale-110" onClick={handleNav}>&#9776; </button>
+      <div className={`lg:hidden ${theme.syntax} openbtn mr-3 hover:scale-110`} onClick={handleNav}><BiMenu size={30} /> </div>
 
       {/* for mobile */}
       <ul

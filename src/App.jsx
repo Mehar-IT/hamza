@@ -13,11 +13,28 @@ function App() {
   const { isLightTheme, light, dark } = useThemeContext();
   const theme = isLightTheme ? light : dark;
   const [splashScreen, setSplashScreen] = useState(true);
+  const [nav, setNav] = useState(false);
+
+  function handleNav() {
+    if (!nav) {
+      document.getElementById("mySidepanel").style.width = "250px";
+      document.body.style.overflow = "hidden";
+    }
+    else {
+      document.getElementById("mySidepanel").style.width = "0";
+      document.body.style.overflow = "auto";
+    }
+    setNav(!nav)
+  }
+
+
   useEffect(() => {
     setTimeout(() => {
       setSplashScreen(false);
     }, 3000);
   }, []);
+
+
   return (
     <>
       {splashScreen ? (
@@ -28,9 +45,8 @@ function App() {
         </div>
       ) : (
         <div className={`${theme.bg} overflow-hidden`}>
-          <Navbar />
-          <span className="bar">
-
+          <Navbar handleNav={handleNav} nav={nav} />
+          <span className={nav ? 'bar' : ''}>
             <Home />
             <About />
             <Skill />
