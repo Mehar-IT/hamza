@@ -32,7 +32,7 @@ export default function Navbar({ handleNav, nav }) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar").style.top = "0";
       } else {
-        document.getElementById("navbar").style.top = "-50px";
+        document.getElementById("navbar").style.top = "-70px";
       }
       prevScrollpos = currentScrollPos;
     };
@@ -43,7 +43,7 @@ export default function Navbar({ handleNav, nav }) {
   return (
     <div
       id="navbar"
-      className={`${theme.bg} w-full ${theme.syntax} flex justify-between items-center fixed h-16 z-10 opacity-100`}
+      className={`${theme.bg} w-full ${theme.syntax} flex justify-between items-center fixed h-16 z-10 opacity-100 `}
     >
       <div className="logo">
         <img src={logo} alt="" className="w-44 mx-5" />

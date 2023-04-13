@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { FaGithub, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { GoLocation, GoMail } from "react-icons/go";
-import { AiOutlinePhone } from "react-icons/ai";
+import { AiOutlineWhatsApp } from "react-icons/ai";
 import logo from "../assets/hamza.png";
 import { useThemeContext } from "../context/ThemeContextProvider";
+import { Link } from "react-scroll";
 
 export default function Contact() {
   const { isLightTheme, light, dark } = useThemeContext();
@@ -20,34 +21,41 @@ export default function Contact() {
       className={` ${theme.bg}`}
     >
       <div
-        className={`max-w-[1000px] mx-auto flex flex-col justify-between items-center ${
-          !isLightTheme ? "text-gray-300" : "text-gray-700"
-        }  pt-3`}
+        className={`max-w-[1000px] mx-auto flex flex-col justify-between items-center ${!isLightTheme ? "text-gray-300" : "text-gray-700"
+          }  pt-3`}
       >
-        <span>
-          <img src={logo} alt="" />
-        </span>
-        <div className="flex flex-col sm:flex-row flex-wrap justify-between w-full   ">
-          <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
-            <span>
-              <GoLocation size={30} />
-            </span>
-            <h1>Address</h1>
-            <p>Hyderabad,Sindh Pakistan</p>
+        <Link to="home" smooth={true} duration={500} className="hover:cursor-pointer ">
+          <span>
+            <img src={logo} alt="logo" />
+          </span>
+        </Link>
+        <div className="flex flex-col sm:flex-row flex-wrap justify-between w-full ">
+          <div className="card hover:scale-110 m-3 hover:cursor-pointer">
+            <Link to="location" smooth={true} duration={500} offset={-110} className="flex flex-col items-center justify-center ">
+              <span>
+                <GoLocation size={30} />
+              </span>
+              <h1>Address</h1>
+              <p>Hyderabad,Sindh Pakistan</p>
+            </Link>
+          </div>
+          <div className="card hover:scale-110 m-3">
+            <a href="mailto:hamzatarique2000@gmail.com" target="_blank" className="flex flex-col items-center justify-center">
+              <span>
+                <GoMail size={30} />
+              </span>
+              <h1>Email</h1>
+              <p>hamzatarique2000@gmail.com</p>
+            </a>
           </div>
           <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
-            <span>
-              <GoMail size={30} />
-            </span>
-            <h1>Email</h1>
-            <p>hamzatarique2000@gmail.com</p>
-          </div>
-          <div className="card flex flex-col items-center justify-center hover:scale-110 m-3">
-            <span>
-              <AiOutlinePhone size={30} />
-            </span>
-            <h1>Contact</h1>
-            <p>(+92) 3179654961</p>
+            <a href="https://wa.me/923179654961" target="_blank" className="flex flex-col items-center justify-center">
+              <span>
+                <AiOutlineWhatsApp size={30} />
+              </span>
+              <h1>whatsapp</h1>
+              <p>(+92) 317 9654961</p>
+            </a>
           </div>
         </div>
 
