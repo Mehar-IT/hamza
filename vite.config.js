@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/new_portfolio/",
+  base: "/hamza/",
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 10000,

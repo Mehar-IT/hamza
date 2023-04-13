@@ -1,19 +1,12 @@
 import React, { useEffect } from "react";
-import {
-  FaGithub,
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
-import {
-  BiMenu
-} from "react-icons/bi";
+import { FaGithub, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { BiMenu } from "react-icons/bi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import logo from "../assets/hamza.png";
 import { Link } from "react-scroll";
 import { useThemeContext } from "../context/ThemeContextProvider";
 import DarkModeToggle from "react-dark-mode-toggle";
-import './navbar.css'
+import "./navbar.css";
 
 export default function Navbar({ handleNav, nav }) {
   const { toggleTheme, isLightTheme, light, dark } = useThemeContext();
@@ -37,8 +30,6 @@ export default function Navbar({ handleNav, nav }) {
       prevScrollpos = currentScrollPos;
     };
   }, []);
-
-
 
   return (
     <div
@@ -90,16 +81,21 @@ export default function Navbar({ handleNav, nav }) {
       </ul>
 
       {/* hamburger */}
-      <div className={`lg:hidden ${theme.syntax} openbtn mr-3 hover:scale-110`} onClick={handleNav}><BiMenu size={30} /> </div>
+      <div
+        className={`lg:hidden ${theme.syntax} openbtn mr-3 hover:scale-110`}
+        onClick={handleNav}
+      >
+        <BiMenu size={30} />{" "}
+      </div>
 
       {/* for mobile */}
       <ul
         id="mySidepanel"
-        className={
-          `sidepanel ${theme.bg} items-center space-y-3 text-3xl`
-        }
+        className={`sidepanel ${theme.bg} items-center space-y-3 text-3xl`}
       >
-        <a className="closebtn hover:scale-110" onClick={handleNav}>&times;</a>
+        <a className="closebtn hover:scale-110" onClick={handleNav}>
+          &times;
+        </a>
         <li className="hover:text-gray-300 hover:scale-110">
           <Link onClick={handleNav} to="home" smooth={true} duration={500}>
             Home
@@ -144,24 +140,20 @@ export default function Navbar({ handleNav, nav }) {
           </Link>
         </li>
         <li className="hover:text-gray-300 hover:scale-110">
-          <Link
-            onClick={handleNav}
-            to="contact"
-            smooth={true}
-            duration={1000}
-          >
+          <Link onClick={handleNav} to="contact" smooth={true} duration={1000}>
             Contact
           </Link>
         </li>
-        <li className="text-center" onClick={handleNav}>
-          <DarkModeToggle
-            onChange={toggleTheme}
-            checked={isLightTheme}
-            size={70}
-          />
-        </li>
+        <div className="text-center">
+          <span onClick={handleNav}>
+            <DarkModeToggle
+              onChange={toggleTheme}
+              checked={isLightTheme}
+              size={70}
+            />
+          </span>
+        </div>
       </ul>
-
 
       <div className="hidden xl:flex fixed flex-col left-0 top-[35%] text-white ">
         <ul>
@@ -208,15 +200,17 @@ export default function Navbar({ handleNav, nav }) {
         </ul>
       </div>
 
-      {!nav && <div
-        id="mybutton"
-        className=" hidden z-10 fixed bottom-3 right-5 bg-gray-300   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110"
-        onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }}
-      >
-        <AiOutlineArrowUp size={30} className="text-gray-800" />
-      </div>}
+      {!nav && (
+        <div
+          id="mybutton"
+          className=" hidden z-10 fixed bottom-3 right-5 bg-gray-300   rounded-full p-2 cursor-pointer hover:bg-gradient-to-r from-indigo-500 hover:scale-110"
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <AiOutlineArrowUp size={30} className="text-gray-800" />
+        </div>
+      )}
     </div>
   );
 }
